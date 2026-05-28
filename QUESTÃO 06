@@ -1,0 +1,29 @@
+programa {
+	funcao inicio() {
+
+		inteiro valor, maior_valor = 0, menor_valor = 0
+		inteiro i
+
+		para (i = 1; i <= 50; i++) {
+			escreva("Digite o ", i, "º valor: ")
+			leia(valor)
+
+			se (i == 1) {
+				maior_valor = valor
+				menor_valor = valor
+			} 
+			senao {
+				se (valor > maior_valor) {
+					maior_valor = valor
+				}
+				se (valor < menor_valor) {
+					menor_valor = valor
+				}
+			
+		escreva("\n======= RESULTADO DA ANÁLISE =======\n")
+		escreva("Maior valor encontrado: ", maior_valor, "\n")
+		escreva("Menor valor encontrado: ", menor_valor, "\n")
+	}
+ }
+}
+}
