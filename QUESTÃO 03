@@ -1,0 +1,42 @@
+programa {
+	funcao inicio() {
+		
+real salario, soma_salario = 0.0, maior_salario = 0.0, media_salario, media_filhos, percentual_salario_100
+inteiro filhos, soma_filhos = 0, cont_salario_100 = 0, i
+
+		para (i = 1; i <= 5; i++)
+		{
+			escreva("Pesquisa ", i, " de 5\n")
+			
+			escreva("Digite o salário do habitante: R$ ")
+			leia(salario)
+			
+			escreva("Digite o número de filhos: ")
+			leia(filhos)
+			
+			soma_salario = soma_salario + salario
+			soma_filhos = soma_filhos + filhos
+			
+			se (salario > maior_salario)
+			{
+				maior_salario = salario
+			}
+			se (salario <= 100.0)
+			{
+				cont_salario_100 = cont_salario_100 + 1
+			}
+			
+			escreva("-----------------------------------------\n")
+		}
+
+		media_salario = soma_salario / 5
+		media_filhos = soma_filhos / 5.0
+		percentual_salario_100 = (cont_salario_100 / 5.0) * 100
+
+		escreva("\n======= RESULTADOS DA PESQUISA =======\n")
+		escreva("Média do salário da população: R$ ", media_salario, "\n")
+		escreva("Média do número de filhos: ", media_filhos, "\n")
+		escreva("Maior salário cadastrado: R$ ", maior_salario, "\n")
+		escreva("Percentual de pessoas com salário até R$100,00: ", percentual_salario_100, "%\n")
+	}
+}
