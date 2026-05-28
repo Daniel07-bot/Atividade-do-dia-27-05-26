@@ -1,0 +1,15 @@
+programa {
+	funcao inicio() {
+
+		inteiro numero, j
+
+		escreva("Digite o número que você deseja ver a tabuada: ")
+		leia(numero)
+
+		escreva("\n======= TABUADA DO ", numero, " =======\n")
+		
+		para (j = 1; j <= 10; j++) {
+			escreva(numero, " x ", j, " = ", numero * j, "\n")
+		}
+	}
+}
