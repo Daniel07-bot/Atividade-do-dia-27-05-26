@@ -1,0 +1,47 @@
+programa {
+	funcao inicio() {
+		inteiro cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, nulos = 0, brancos = 0
+		inteiro voto, i
+
+		para (i = 1; i <= 1000; i++) {
+			escreva("\n--- OPÇÕES DE VOTO ---\n")
+			escreva("1, 2, 3 ou 4 - Candidatos\n")
+			escreva("5 - Voto Nulo\n")
+			escreva("6 - Voto em Branco\n")
+			escreva("0 - Encerrar Votação\n")
+			escreva("----------------------\n")
+			
+			escreva("Digite o código do voto: ")
+			leia(voto)
+
+			se (voto == 0) {
+				pare
+			}
+
+			escolha (voto) {
+				caso 1: cand1 = cand1 + 1
+					pare
+				caso 2: cand2 = cand2 + 1
+					pare
+				caso 3: cand3 = cand3 + 1
+					pare
+				caso 4: cand4 = cand4 + 1
+					pare
+				caso 5: nulos = nulos + 1
+					pare
+				caso 6: brancos = brancos + 1
+					pare
+				caso contrario: 
+					escreva("Código inválido! Voto desconsiderado.\n")
+			}
+		}
+
+		escreva("\n======= APURAÇÃO DOS VOTOS =======\n")
+		escreva("Candidato 1: ", cand1, " voto(s)\n")
+		escreva("Candidato 2: ", cand2, " voto(s)\n")
+		escreva("Candidato 3: ", cand3, " voto(s)\n")
+		escreva("Candidato 4: ", cand4, " voto(s)\n")
+		escreva("Votos Nulos (5): ", nulos, " voto(s)\n")
+		escreva("Votos em Branco (6): ", brancos, " voto(s)\n")
+	}
+}
